@@ -95,7 +95,7 @@ function sendMessage() {
 document.addEventListener("DOMContentLoaded", () => {
   const inputField = document.getElementById("input");
   inputField.addEventListener("keydown", function (e) {
-    if (e.code === "Enter") {
+    if (e.code === "Enter" || e.code === "NumpadEnter") {
       let input = inputField.value.trim();
       input != "" && output(input);
       inputField.value = "";
@@ -185,3 +185,10 @@ function addChat(input, product) {
   scroll.scrollTop = scroll.scrollHeight;
   voiceControl(product);
 }
+function setVw() {
+  let vw = document.documentElement.clientWidth;
+  document.documentElement.style.setProperty('--vw', `${vw}`);
+}
+
+setVw();
+window.addEventListener('resize', setVw);
