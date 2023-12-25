@@ -46,7 +46,6 @@ body .card #message-section::-webkit-scrollbar {
   width: 10px;
 }
 body .card #message-section {
-  height: 80vh;
   padding: .5rem;
   overflow-y: auto;
   background: #fff;
@@ -158,8 +157,6 @@ body .card .send .circle i {
     max-width: 100%;
   }
   body .card #message-section {
-    height: 80vh;
-    
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: var(--thumbBG) var(--scrollbarBG);
